@@ -1,0 +1,23 @@
+.campanies{
+    padding: 0 0 5rem 0;
+
+    &__logo-box{
+        max-width: 100%;
+        // rozciagniecie pudelka na cala szerokosc
+        height: 3rem;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        position: relative;
+
+        i{
+            height: 100%;
+            font-size: 35px;
+
+            &:hover{
+                color: red;
+                transition: 0.2s;
+            }
+        }
+    }
+}

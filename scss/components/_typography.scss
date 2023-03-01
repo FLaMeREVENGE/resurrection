@@ -1,0 +1,84 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.display-2{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+    &--intro{
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &--description{
+        font-size: 1rem;
+        display: block;
+        margin-top: 1.2rem;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.5rem;
+            display: inline-block;
+            // inline-block znaczy ze elementy beda znajdowac sie jeden obok drugiego tworzac TYLKO JEDEN RZAD.
+        }
+    }
+}
+
+.heading-line::before{
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $black;
+}
+
+.heading-line::after{
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: $black;
+    padding-top: 0.5rem;
+}
+
+.display-3{
+    font-family: 'Poppins', sans-serif;
+
+    &--title{
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        
+        //aplikacja gradientu na tytulach
+        @include gradientRed;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;-moz-text-fill-color: transparent; 
+
+        //przedrostki -webkit-, -moz, a takze -ms- sa dlatego aby kazda przegladarka intenetowa mogla "obsluzyc" dana wlasciwosc. dzieje sie tak poniewaz css jest caly czas rozwijany...
+        //Za pomocą właściwości background-clip możemy określić sposób przycięcia tła interesującego nas elementu.
+        //Za pomocą właściwości text-fill-color możemy określić jakim kolorem powinno zostać wypełnione wnętrze tekstu
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.border-right{
+    border-right: 0.1rem solid $gray-300;
+    height: 100%;
+}
+
+
+
+.gardient{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 4%, rgba(110,110,110,1) 100%);
+    //wklejamy tutaj background-image zamiast @include, poniewaz elemet jest tylko do polowy strony a nie po calosci tak jak go uzywalismy wczesniej.
+}

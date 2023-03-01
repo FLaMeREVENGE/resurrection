@@ -1,0 +1,44 @@
+@use '../custom' as*;
+@use '../components/mixins' as *;
+
+.btn-rounded{
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+    //media-breakpoint-up(sm) sprawi ze widocznosc bedzie dopiero ponizej 575px
+    //display: none - sprawia ze to ukrywa
+
+    position: relative;
+    padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem soild rgba($white, 0.6);
+    background: $white;
+
+    span{
+        position: absolute;
+        background-color: black;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+
+        i{
+            color: $white;
+            font-size: 1rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    &:hover{
+        @include gradient;
+        color: $white;
+        transition: 1s;
+
+        span{
+            background-color: rgba($black, 0.6);
+        }
+    }
+}

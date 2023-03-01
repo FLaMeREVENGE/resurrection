@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.portfolio{
+    padding: 4rem 0;
+}
+
+.portfolio-box{
+    position: relative;
+    width: 100%;
+    height: 29rem;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    border-top: 0.5rem solid rgb(75, 75, 75);
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-info{
+        background-color: rgba(black, 0.75);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        .caption{
+            text-align: center;
+            color: rgb(255, 0, 0);
+            @include absoluteCenter;
+
+            h4{
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+    }
+
+    &:hover{
+
+        img{
+            transform: scale(1.3);
+            transition: 0.4s;
+            // transform sprawia ze obrazek sie powieksza a jego liczby to pierwsza osia x, a druga os y
+        }
+
+        .portfolio-info{
+            opacity: 1;
+            visibility: visible;
+            transition: 0.4s;
+        }
+    }
+}
