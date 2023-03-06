@@ -15,7 +15,7 @@ Thanks to the freeCodeCamp.org tutorial, I was able to create a very large websi
 - Bootstrap
 
 # My Portfolio :smiling_imp:
-### [Behance](https://www.behance.net/karolkomor1b9a) :computer:
+### [Behance](https://www.behance.net/KarolKomorowski) :computer:
 
 ![Behance Profile](behance_banner.png)
 ### [Github](https://github.com/FLaMeREVENGE) :paw_prints:
